@@ -2,7 +2,7 @@
 ## By Dennis Kimathi
 
 ## Screenshot
- ![image]()
+ ![image](./assets/images/hero.png)
 
  ## Table of Content
  - [Description](#description)
