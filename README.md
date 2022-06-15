@@ -54,7 +54,7 @@ Figma Design -[Dennis-Kimathi-Portfolio-site](https://www.figma.com/file/0pUCFpq
 
 ### Technology  Used
 * HTML - which was used to develope the structure off the pages.
-* CSS - which was used to style the User Interface.
+* TAILWINDCSS - which was used to style the User Interface.
 * JAVASCRIPT - which was used for DOM(Document Object Manipulation) scripts.
 [Go Back to the top](#Dennis-Kimathi-Portfolio-Site)
 
