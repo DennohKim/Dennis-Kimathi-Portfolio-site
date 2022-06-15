@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet" />
     <title>Dennis Kimathi</title>
   </head>
   <body>
@@ -20,36 +20,46 @@
           <div class="logo-container">
             <img src="./assets/images/Logo.png" alt="logo" />
           </div>
-          <nav>
-            <ul class="flex">
-              <li
-                class="mr-10 text-base hover:text-[#D94F04] active:text-[#D94F04]"
-              >
-                <a href="#" id="home">Home</a>
-              </li>
-              <li
-                class="mr-10 text-base hover:text-[#D94F04] active:text-[#D94F04]"
-              >
-                <a href="#" id="about">About</a>
-              </li>
-              <li
-                class="mr-10 text-base hover:text-[#D94F04] active:text-[#D94F04]"
-              >
-                <a href="#" id="works">Works</a>
-              </li>
-              <li
-                class="mr-10 text-base hover:text-[#D94F04] active:text-[#D94F04]"
-              >
-                <a href="#" id="skills">Skills</a>
-              </li>
-              <li
-                class="mr-10 text-base hover:text-[#D94F04] active:text-[#D94F04]"
-              >
-                <a href="#" id="contact">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="flex social-logos">
+          <div class="invisible md:visible space-x-6">
+            <a
+              class="text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="home"
+              >Home</a
+            >
+
+            <a
+              class="text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="about"
+              >About</a
+            >
+
+            <a
+              class="text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="works"
+              >Works</a
+            >
+
+            <a
+              class="text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="skills"
+              >Skills</a
+            >
+
+            <a
+              class="text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="contact"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Logos -->
+
+          <div class="invisible md:visible flex social-logos">
             <div class="mr-5 twitter-logo">
               <a href="https://twitter.com/mbiebuz" target="_blank"
                 ><i
@@ -74,15 +84,71 @@
               ></a>
             </div>
           </div>
+
+          <!-- Hamburger Menu -->
+
+          <button
+            id="menu-btn"
+            class="block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+          <div
+            id="menu"
+            class="absolute hidden flex-col py-20 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+          >
+            <a
+              class="self-center text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="home"
+              >Home</a
+            >
+
+            <a
+              class="self-center text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="about"
+              >About</a
+            >
+
+            <a
+              class="self-center text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="works"
+              >Works</a
+            >
+
+            <a
+              class="self-center text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="skills"
+              >Skills</a
+            >
+
+            <a
+              class="self-center text-base hover:text-[#D94F04] active:text-[#D94F04]"
+              href="#"
+              id="contact"
+              >Contact</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
     <!-- HERO SECTION -->
 
-    <section class="bg-[url('./assets/images/BG.jpg')] bg-cover hero-section">
+    <section class="bg-[url('../assets/images/BG.jpg')] bg-cover hero-section">
       <div class="w-5/6 m-auto pt-5 container">
-        <div class="grid grid-cols-3 justify-items-center mt-40 hero-container">
+        <div
+          class="grid grid-cols-1 grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 justify-items-center mt-40 hero-container"
+        >
           <div class="flex flex-col items-end hero-badge">
             <div class="px-10 py-6 bg-white flex gap-6 shadow-md rounded-md">
               <span class="text-5xl">👋</span>
@@ -101,18 +167,30 @@
           </div>
 
           <div class="hero-image">
-            <img class="" src="./assets/images/Chizaa.png" alt="" />
+            <img class="-mt-12" src="./assets/images/Chizaa.png" alt="" />
           </div>
 
           <div class="flex flex-col justify-between gap-x-1 languages-icons">
             <div class="html">
-              <img class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" src="./assets/images/html-hero.png" alt="" />
+              <img
+                class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                src="./assets/images/html-hero.png"
+                alt=""
+              />
             </div>
             <div class="pl-10 JS">
-              <img class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" src="./assets/images/JS-hero.png" alt="" />
+              <img
+                class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                src="./assets/images/JS-hero.png"
+                alt=""
+              />
             </div>
             <div class="css">
-              <img class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" src="./assets/images/css-hero.png" alt="" />
+              <img
+                class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                src="./assets/images/css-hero.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -122,12 +200,16 @@
     <!-- ABOUT SECTION -->
     <section class="about-section">
       <div class="w-4/6 m-auto pt-5 pb-5 container">
-        <h1 class="font-bold text-4xl leading-tight text-center pt-28 pb-10">
+        <h1
+          class="font-bold text-2xl md:text-3xl lg:text-4xl leading-tight text-center pt-28 pb-10"
+        >
           I Know That <span class="text-[#D94F04]">Good Apps</span> <br />
           Means <span class="text-[#D94F04]">Good Business</span>
         </h1>
 
-        <div class="grid grid-cols-4 gap-12 pb-10 whatido-container">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-12 pb-10 whatido-container"
+        >
           <div class="about-skill">
             <div about-skill__image>
               <img class="w-full" src="./assets/images/Product.png" alt="" />
@@ -135,8 +217,8 @@
             <div class="w-11/12">
               <h2 class="py-5 font-bold text-xl">Product Designer</h2>
               <p class="about-skill__paragraph">
-                I am a product designer with a passion for building beautiful
-                and functional web applications.
+                I'm a hardworking and detail-oriented designer. I consider myself a problem solver,
+                rather than a design guru.
               </p>
             </div>
           </div>
@@ -146,8 +228,7 @@
             </div>
             <h2 class="py-5 font-bold text-xl">React Developer</h2>
             <p class="about-skill__paragraph">
-              I am a react developer with a passion for building beautiful and
-              functional web applications.
+              I'm passionate about building beautiful, functional web applications with React JS.
             </p>
           </div>
           <div class="about-skill">
@@ -156,8 +237,7 @@
             </div>
             <h2 class="py-5 font-bold text-xl">NodeJS Developer</h2>
             <p class="about-skill__paragraph">
-              I am a backend developer with a passion for building beautiful and
-              functional web applications.
+              I love to code, and I'm always looking for new challenges. My main focus for backend development is Node JS.
             </p>
           </div>
           <div class="about-skill">
@@ -166,8 +246,7 @@
             </div>
             <h2 class="py-5 font-bold text-xl">Web Designer</h2>
             <p class="about-skill__paragraph">
-              I am a web designer with a passion for building beautiful and
-              functional web applications.
+             As a web designer, I have built sites for individual clients and small local businesses.
             </p>
           </div>
         </div>
@@ -177,14 +256,18 @@
     <!-- WORK SECTION -->
     <section class="bg-[#F4E2DE]/[0.3] work-section">
       <div class="w-4/6 m-auto pt-5 pb-5 container">
-        <h1 class="font-bold text-4xl text-center pt-20 pb-10">
+        <h1
+          class="font-bold text-2xl md:text-3xl lg:text-4xl text-center pt-20 pb-10"
+        >
           My Creative <span class="text-[#D94F04]">Portfolio</span> Section
         </h1>
 
         <div
-          class="grid grid-cols-3 grid-rows-2 gap-8 justify-items-center pb-20 works-container"
+          class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-8 justify-items-center pb-20 works-container"
         >
-          <div class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]">
+          <div
+            class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]"
+          >
             <a
               href="https://dennohkim.github.io/Moringa-School-Landing-Page/"
               target="_blank"
@@ -197,7 +280,7 @@
                 class="flex flex-col justify-center align-center text-center pt-10"
               >
                 <a
-                  class="font-bold text-xl "
+                  class="font-bold text-xl"
                   href="https://dennohkim.github.io/Moringa-School-Landing-Page/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -214,7 +297,9 @@
             </a>
           </div>
 
-          <div class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]">
+          <div
+            class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]"
+          >
             <a
               href="https://dennohkim.github.io/Quick-Movers-Website/"
               target="_blank"
@@ -244,7 +329,9 @@
             </a>
           </div>
 
-          <div class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]">
+          <div
+            class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]"
+          >
             <a
               href="https://dennohkim.github.io/Quiz-Board-App/"
               target="_blank"
@@ -274,7 +361,9 @@
             </a>
           </div>
 
-          <div class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]">
+          <div
+            class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]"
+          >
             <a
               href="https://elvis-munene.github.io/Abojani-Academy-web-app/"
               target="_blank"
@@ -308,7 +397,9 @@
             </a>
           </div>
 
-          <div class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]">
+          <div
+            class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]"
+          >
             <a
               href="https://dribbble.com/shots/16652850-Real-Estate-Listings-App/attachments/11687292?mode=media"
               target="_blank"
@@ -338,13 +429,15 @@
             </a>
           </div>
 
-          <div class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]">
+          <div
+            class="bg-[#fff] shadow-md rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-[#F4E2DE]/[0.3] hover:text-[#D94F04]"
+          >
             <a
               href="https://drive.google.com/drive/u/0/folders/1NopIGzL7zyiOj5PNg9eiTBVq5W7Nx0Ka"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div class="w-11/12 m-auto p-3 ">
+              <div class="w-11/12 m-auto p-3">
                 <img src="./assets/images/Login.png" alt="" />
               </div>
               <div
@@ -362,7 +455,7 @@
                   href="https://drive.google.com/drive/u/0/folders/1NopIGzL7zyiOj5PNg9eiTBVq5W7Nx0Ka"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Mobile App</a
+                  >Web App UI</a
                 >
               </div>
             </a>
@@ -374,34 +467,52 @@
     <!-- SKILLS SECTION -->
     <section class="skill-section">
       <div class="w-4/6 m-auto pt-5 pb-16 container">
-        <h1 class="font-bold text-3xl text-center pt-10 pb-10 main-headings">
+        <h1
+          class="font-bold text-2xl md:text-3xl lg:text-4xl text-center pt-10 pb-10 main-headings"
+        >
           Skills & Experience
         </h1>
-        <div class="grid grid-cols-2 grid-row pt-2 skills-container">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 grid-row pt-6 md:pt-2 skills-container"
+        >
           <div
             class="grid grid-cols-3 grid-row-2 gap-8 languages-logos__container"
           >
-            <div class="w-9/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images">
+            <div
+              class="w-6/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images"
+            >
               <img src="./assets/images/html.png" alt="html logo" />
             </div>
-            <div class="w-9/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images">
+            <div
+              class="w-6/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images"
+            >
               <img src="./assets/images/css.png" alt="Css logo" />
             </div>
-            <div class="w-9/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images">
+            <div
+              class="w-6/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images"
+            >
               <img src="./assets/images/javascript.png" alt="Javascript Logo" />
             </div>
-            <div class="w-9/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images">
+            <div
+              class="w-6/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images"
+            >
               <img src="./assets/images/git.png" alt="Git Logo" />
             </div>
-            <div class="w-9/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images">
+            <div
+              class="w-6/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images"
+            >
               <img src="./assets/images/figma.png" alt="Figma Logo" />
             </div>
-            <div class="w-9/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images">
+            <div
+              class="w-6/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 languages-logos__images"
+            >
               <img src="./assets/images/node.png" alt="" />
             </div>
           </div>
-          <div class="grid grid-rows-2 justify-center experiences-container">
-            <div class="flex flex-column gap-10 pt-4 job-experience">
+          <div
+            class="grid grid-rows-2 justify-center pt-10 md:pt-2 experiences-container"
+          >
+            <div class="flex flex-column gap-24 pt-4 job-experience">
               <div class="year">
                 <p class="text-[#D94F04] year-text">2021</p>
               </div>
@@ -414,7 +525,7 @@
               </div>
             </div>
 
-            <div class="flex flex-column gap-10 pt-4 job-experience">
+            <div class="flex flex-column gap-24 pt-4 job-experience">
               <div class="year">
                 <p class="text-[#D94F04] year-text">2022</p>
               </div>
@@ -431,21 +542,22 @@
     <!-- TESTIMONIAL SECTION -->
     <section class="bg-[#F4E2DE]/[0.3] testimonials">
       <div class="w-4/6 m-auto pt-5 pb-5 py-10 container">
-        <h1 class="font-bold text-3xl text-center py-12 main-headings">
+        <h1
+          class="font-bold text-2xl md:text-3xl lg:text-4xl text-center py-12 main-headings"
+        >
           Testimonials
         </h1>
         <div
           class="flex flex-col justify-center max-w-3xl p-4 text-gray-800 bg-white rounded-lg shadow-md shadow-cyan-700/50 m-auto mb-20"
         >
-        
           <div class="mb-2">
             <div class="h-3 text-3xl text-left text-[#D94F04]">“</div>
             <p class="px-4 text-center text-gray-600">
-              The Landscaping Professionals were quick, courteous and very
-              helpful. They helped me restore my lawn and gardens completely
-              after putting in my deck. I was worried it wouldn’t be done in
-              time for my garden party, but they finished the job with time to
-              spare!”
+              I have worked with Dennis for over 3 years now and have always
+              been impressed with the level of service he provides. He is
+              excellent at understanding our clients needs, he is patient and
+              willing to go the extra mile to ensure his design works fits
+              perfectly for the client. I would highly recommend Dennis Kimathi.
             </p>
             <div class="h-3 text-3xl text-right text-[#D94F04]">”</div>
             <div class="flex justify-center gap-7 pt-4">
@@ -457,11 +569,14 @@
                 <p class="pt-3 text-sm text-gray-600">WinTech Systems CEO</p>
               </div>
             </div>
-            
           </div>
-          <div class="flex justify-center gap-10 pt-8 pb-4  buttons">
-            <i class="text-[#D94F04] text-3xl fa-solid fa-circle-chevron-left"></i>
-            <i class="text-[#D94F04] text-3xl fa-solid fa-circle-chevron-right"></i>
+          <div class="flex justify-center gap-10 pt-8 pb-4 buttons">
+            <i
+              class="text-[#D94F04] text-3xl fa-solid fa-circle-chevron-left"
+            ></i>
+            <i
+              class="text-[#D94F04] text-3xl fa-solid fa-circle-chevron-right"
+            ></i>
           </div>
         </div>
       </div>
@@ -470,33 +585,80 @@
     <!-- CONTACT SECTION -->
     <section class="contact-section">
       <div class="w-4/6 m-auto pt-5 pb-5 mb-20 container">
-        <h1 class="font-bold text-3xl text-center py-12 main-headings">
+        <h1
+          class="font-bold text-2xl md:text-3xl lg:text-4xl text-center py-12 main-headings"
+        >
           Take A Coffee & Chat With Me
         </h1>
         <div class="m-auto w-fit">
-        <div class="grid grid-cols-2 gap-10 justify-center  contacts-container">
-          <div class="flex gap-6 m-auto py-8 px-20 rounded-md bg-[#F4E2DE]/[0.4] contact-info">
-            <i class="text-xl text-[#D94F04] fa-solid fa-envelope"></i>
-            <p class="contact-info-email"><a href="mailto:Kimathidennis38@gmail.com">Kimathidennis38@gmail.com</a></p>
+          <div
+            class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-10 justify-center contacts-container"
+          >
+            <div
+              class="flex gap-6 m-auto py-8 px-14 rounded-md bg-[#F4E2DE]/[0.4] contact-info"
+            >
+              <i class="text-xl text-[#D94F04] fa-solid fa-envelope"></i>
+              <p class="contact-info-email">
+                <a href="mailto:Kimathidennis38@gmail.com"
+                  >Kimathidennis38@gmail.com</a
+                >
+              </p>
+            </div>
+            <div
+              class="flex gap-10 py-8 px-14 rounded-md bg-[#F4E2DE]/[0.4] contact-info"
+            >
+              <i class="text-xl text-[#D94F04] fa-solid fa-phone"></i>
+              <p class="contact-info-phone">
+                <a href="tel:+254 743 312 265">+254 743 312 265</a>
+              </p>
+            </div>
           </div>
-          <div class="flex gap-10 py-8 px-20 rounded-md bg-[#F4E2DE]/[0.4] contact-info">
-            <i class="text-xl text-[#D94F04] fa-solid fa-phone"></i>
-            <p class="contact-info-phone"><a href="tel:+254 743 312 265">+254 743 312 265</a></p>
-          </div>
+
+          <form class="pt-10">
+            <div class="mb-6">
+              <label
+                for="username-success"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-30"
+                >Your name</label
+              >
+              <input
+                type="text"
+                id="username-success"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light mb-6"
+                placeholder="John Doe"
+              />
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >Your email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light mb-6"
+                placeholder="name@example.com"
+                required
+              />
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                >Your message</label
+              >
+              <textarea
+                id="message"
+                rows="4"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6"
+                placeholder="Hi, I'm getting in touch ..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="text-white bg-[#D94F04] font-medium rounded-md text-sm px-10 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Send message
+            </button>
+          </form>
         </div>
-       
-        <form class="pt-10">
-          <div class="mb-6">
-            <label for="username-success" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-30">Your name</label>
-            <input type="text" id="username-success" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light mb-6" placeholder="John Doe">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-            <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light mb-6" placeholder="name@example.com" required>
-            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-6" placeholder="Hi, I'm getting in touch ..."></textarea>
-          </div>
-          <button type="submit" class=" text-white bg-[#D94F04] font-medium rounded-md text-sm px-10 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send message</button>
-        </form>
-      </div>
       </div>
     </section>
 
